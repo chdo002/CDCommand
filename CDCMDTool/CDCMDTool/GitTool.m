@@ -16,10 +16,10 @@ void commitAndPush(void){
     char inputStr[100];
     printf("输入commit描述: ");
     scanf("%s",inputStr);
-    NSString *comitCommand = [NSString stringWithFormat:@"git commit -m \"%s\" ",inputStr];
-    printf("%s", comitCommand.UTF8String);
+    NSString *comitCommand = [NSString stringWithFormat:@"git commit -m \"%s\"\n",inputStr];
     system(comitCommand.UTF8String);
     system("git push origin");
+    system("git status");
 }
 
 @implementation GitTool
