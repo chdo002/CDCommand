@@ -10,9 +10,9 @@
 
 int excucomd(const char *cmd, _Bool showLog){
     
-    if (showLog) printf("执行 %s",cmd);
+    if (showLog) printf("执行 << %s >>\n",cmd);
     int res =  system(cmd);
-    if (showLog) printf("执行 %s结果: %d \n",cmd, res);
+    if (showLog) printf("执行 << %s >> 结果: %d \n",cmd, res);
     return res;
 }
 
